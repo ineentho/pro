@@ -76,7 +76,7 @@ renovate:
   noGitTlsVerify: false
 
   # Set log level, defaults to 'info'. Allowed values: fatal, error, warn, info, debug, trace
-  logLevel: debug
+  logLevel: info
 
 # Configuration values for the postgresql dependency.
 # Ref: https://github.com/helm/charts/blob/master/stable/postgresql/README.md
