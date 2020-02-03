@@ -34,7 +34,7 @@ renovate:
   # Personal Access Token for bot account
   renovateToken:
 
-  #  The GitHub App ID provided by GitHub Enterprise when you provisioned the Renovate app
+  #  The GitHub App ID provided by GitHub Enterprise when you provisioned the Renovate app. Force string format by quotting value.
   githubAppId:
 
   # A string representation of the private key provided by GitHub Enterprise when you provisioned Renovate

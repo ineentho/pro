@@ -53,22 +53,34 @@ spec:
 
             {{- if .Values.renovate.renovateToken }}
             - name: RENOVATE_TOKEN
-              value: {{ .Values.renovate.renovateToken | quote }}
+              valueFrom:
+                secretKeyRef:
+                  secretName: {{ .Release.Name }}
+                  key: renovateToken
             {{- end }}
 
             {{- if .Values.renovate.githubAppId }}
             - name: GITHUB_APP_ID
-              value: {{ .Values.renovate.githubAppId | quote }}
+              valueFrom:
+                secretKeyRef:
+                  secretName: {{ .Release.Name }}
+                  key: githubAppId
             {{- end }}
 
             {{- if .Values.renovate.githubAppKey }}
             - name: GITHUB_APP_KEY
-              value: {{ .Values.renovate.githubAppKey | quote }}
+              valueFrom:
+                secretKeyRef:
+                  secretName: {{ .Release.Name }}
+                  key: githubAppKey
             {{- end }}
 
             {{- if .Values.renovate.githubComToken }}
             - name: GITHUB_COM_TOKEN
-              value: {{ .Values.renovate.githubComToken | quote }}
+              valueFrom:
+                secretKeyRef:
+                  secretName: {{ .Release.Name }}
+                  key: githubComToken
             {{- end }}
 
             {{- if .Values.renovate.noNodeTlsVerify }}
